@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML codes</title>
+  </head>
+  <body style="color: brown; font-family: Arial, sans-serif; margin: 0; padding: 0;">
+    
+    <!-- Header Section -->
+    <header style="background-color: #f0f0f0; padding: 20px; text-align: center; border-bottom: 2px solid #ccc;">
+      <img src="LUlogo.jpg" alt="LU Logo" width="150" style="margin-bottom: 20px;" />
+      <h1
+        style="
+          color: deepskyblue;
+          font-family: &quot;Times New Roman&quot;, Times, serif;
+          font-size: 60px;
+          margin: 10px 0;
+        "
+      >
+        Welcome everyone!
+      </h1>
+      <p style="font-size: 16px; color: #666;">This is my first HTML page using VS Code.</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main style="padding: 40px 20px; max-width: 800px; margin: 0 auto;">
+      
+      <!-- Feedback Section -->
+      <section style="margin-bottom: 40px;">
+        <h2 style="color: deepskyblue; border-bottom: 2px solid deepskyblue; padding-bottom: 10px;">Share Your Feedback</h2>
+        <textarea 
+          placeholder="Kindly provide your feedback!" 
+          style="width: 100%; height: 150px; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;"
+        ></textarea>
+        <br /><br />
+        <button
+          style="
+            background-color: dodgerblue;
+            color: aliceblue;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+          "
+          onclick="alert('Thank you for subscribing!')"
+        >
+          Subscribe Here
+        </button>
+      </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer style="background-color: #f0f0f0; padding: 20px; text-align: center; border-top: 2px solid #ccc; margin-top: 40px;">
+      <p style="margin: 10px 0;">Current time: <span id="currentTime" style="font-weight: bold;"></span></p>
+      <p style="font-size: 12px; color: #999;">&copy; 2026 My Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function updateTime() {
+        const now = new Date();
+        document.getElementById("currentTime").innerHTML =
+          now.toLocaleTimeString();
+      }
+      updateTime();
+      setInterval(updateTime, 1000); // Updates every second
+    </script>
+  </body>
+</html>
